@@ -2,7 +2,7 @@
 name = "pallet-poe"
 version = "4.0.0-dev"
 description = "FRAME pallet Proof of existence."
-authors = ["Amesy <https://github.com/amesy>"]
+authors = ["Bry Vegas <https://github.com/bryvegas>"]
 homepage = "https://substrate.io/"
 edition = "2021"
 license = "Unlicense"
