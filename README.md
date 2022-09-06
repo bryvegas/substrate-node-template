@@ -19,8 +19,8 @@ cargo test -p  PALLETS-PACKAGE-NAME
 cargo +nightly fmt
 ```
 
-## Substrate 区块链应用开发进阶
+## Substrate 区块链应用开发
 
 ### 第一次作业
 
-![作业截图](https://p.qlogo.cn/qqmail_head/ajNVdqHZLLCQSzO5aV1OLkcQeaG9hOL4T3lzEY5u5nv6CBV2rOX8Ky14B33clClkl060Uckjoia8/0)
+![作业截图](https://p.qlogo.cn/qqmail_head/C6nnRGnPbvwlVslNHxDtemvOjTjEDAZ1mxOIUduh7wHFIBmwTFrx9yopiaUhqibRnc40toTNw75xE/0)
