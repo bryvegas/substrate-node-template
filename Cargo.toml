@@ -4,6 +4,8 @@ members = [
     "pallets/template",
     "pallets/poe",
     "runtime",
+    "pallets/kitties01",
+    "pallets/kitties02",
 ]
 [profile.release]
 panic = "unwind"
