@@ -32,7 +32,7 @@ fn create_kitty_failed() {
 #[test]
 fn create_kitty_and_reversed_failed() {
 	new_test_ext().execute_with(|| {
-		// 已知账户3中的余额为1000，小于质押要求的数目10000，所以质押会失败
+		// 已知账户3中的余额为999，小于质押要求的数目1000，所以质押会失败
 		assert_noop!(Kitties02Module::create(Origin::signed(3)), Error::<Test>::TokenNotEnough);
 	})
 }
@@ -110,7 +110,7 @@ fn breed_kitty_failed_token_not_enough_to_reversed() {
 		// 用账户2创建一个kitty,kitty编号经过累加变为1
 		assert_ok!(Kitties02Module::create(Origin::signed(2)));
 
-		// 已知账户3中的余额为1000，小于质押要求的数目10000，所以预期质押会失败
+		// 已知账户3中的余额为999，小于质押要求的数目1000，所以预期质押会失败
 		assert_noop!(Kitties02Module::breed(Origin::signed(3), 0, 1), Error::<Test>::TokenNotEnough);
 	})
 }
@@ -179,10 +179,7 @@ fn transfer_kitty_failed_token_not_enough_to_reversed() {
 		assert_ok!(Kitties02Module::create(Origin::signed(1)));
 
 		// 账户1把自己的编号为0的kitty转移给账户3
-		// 由于账户3的待质押token为1000，不满足质押条件10000，预期将报错
-		assert_noop!(
-			Kitties02Module::transfer(Origin::signed(1), 0, 3),
-			Error::<Test>::TokenNotEnough
-		);
+		// 由于账户3的待质押token为999，不满足质押条件1000，预期将报错
+		assert_noop!(Kitties02Module::transfer(Origin::signed(1), 0, 3), Error::<Test>::TokenNotEnough);
 	})
 }
